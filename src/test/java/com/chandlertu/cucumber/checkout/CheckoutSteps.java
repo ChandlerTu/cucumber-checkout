@@ -2,31 +2,31 @@ package com.chandlertu.cucumber.checkout;
 
 import static org.junit.Assert.assertEquals;
 
-import cucumber.api.java.zh_cn.¼ÙÉè;
-import cucumber.api.java.zh_cn.µ±;
-import cucumber.api.java.zh_cn.ÄÇÃ´;
+import cucumber.api.java.zh_cn.å‡è®¾;
+import cucumber.api.java.zh_cn.å½“;
+import cucumber.api.java.zh_cn.é‚£ä¹ˆ;
 
 public class CheckoutSteps {
 	int bananaPrice;
 	Checkout checkout = new Checkout();
 
-	@¼ÙÉè("^\"([^\"]*)\"µÄ¼Û¸ñÊÇ(\\d+)ÔªÒ»½ï$")
-	public void µÄ¼Û¸ñÊÇ_ÔªÒ»½ï(String name, int price) throws Exception {
+	@å‡è®¾("^\"([^\"]*)\"çš„ä»·æ ¼æ˜¯(\\d+)å…ƒä¸€æ–¤$")
+	public void çš„ä»·æ ¼æ˜¯_å…ƒä¸€æ–¤(String name, int price) throws Exception {
 		bananaPrice = price;
 	}
 
-	@µ±("^ÎÒÂò(\\d+)½ï\"([^\"]*)\"$")
-	public void ÎÒÂò_½ï(int count, String arg2) throws Exception {
+	@å½“("^æˆ‘ä¹°(\\d+)æ–¤\"([^\"]*)\"$")
+	public void æˆ‘ä¹°_æ–¤(int count, String arg2) throws Exception {
 		checkout.add(count, bananaPrice);
 	}
 
-	@ÄÇÃ´("^×Ü¼ÛÊÇ(\\d+)Ôª$")
-	public void ×Ü¼ÛÊÇ_Ôª(int total) throws Exception {
+	@é‚£ä¹ˆ("^æ€»ä»·æ˜¯(\\d+)å…ƒ$")
+	public void æ€»ä»·æ˜¯_å…ƒ(int total) throws Exception {
 		assertEquals(total, checkout.total());
 	}
 
-	@µ±("^ÓÖÂòÁË(\\d+)½ï\"([^\"]*)\"$")
-	public void ÓÖÂòÁË_½ï(int count, String arg2) throws Exception {
+	@å½“("^åˆä¹°äº†(\\d+)æ–¤\"([^\"]*)\"$")
+	public void åˆä¹°äº†_æ–¤(int count, String arg2) throws Exception {
 		checkout.add(count, bananaPrice);
 	}
 
